@@ -1,1 +1,201 @@
-/* Add CSS styling here */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0 /* 3px red solid; */
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* GENERAL TIDBITS */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%
+}
+body {
+    background: lightgrey;
+}
+
+img {
+    object-fit: cover;
+    opacity: 80%;
+}
+
+/* HEADER STYLING */
+
+.headerBar {
+    display: flex;
+    align-items: center;
+    background: slategray;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 5rem;
+    margin-left: 4%;
+}
+
+nav {
+    display: flex;
+    margin-right: 4%;
+
+}
+
+
+/* first section */
+
+.cover {
+    position: relative;
+    text-align: center;
+}
+
+.coverImage {
+    max-width: 100%;
+    opacity: 50%;
+    margin-bottom: 10%;
+    
+}
+.coverTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.coverTitle h2 {
+    font-size: 4rem;
+}
+.coverTitle a {
+    font-size: 2.5rem;
+}
+/* second section */
+
+.tileContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tile {
+    width: 30%;
+    /* background: hotpink; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tile img, .tile h3 {
+    max-width: 100%;
+}
+
+.tile h3 {
+    padding: 3% 0% 10% 0%;
+    font-size: 1.6rem;
+}
+
+/* footer styling */
+
+footer {
+    background: slategray;
+    padding:2% 0%;
+    border-top: 1%x black solid;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer div {
+    text-align: center;
+}
+
+footer a {
+ background: slategray;
+ font-size: 2rem;
+}
+
+@media(max-width: 800px) {
+    h1 {
+        font-size: 4rem;
+        margin: 2% 0 0 2%;
+    }
+    nav {
+        margin: 2% 0 0 2%; 
+    }
+}
+
+@media(max-width: 500px){
+    .headerBar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tile {
+        width: 80%;
+    }
+}
+
+/* ACCESSABILITY FEATURE */
+
+.skip {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    height: 1px;
+    width: 1px;
+    text-align: left;
+    overflow: hidden;
+}
+
+a.skip:active, 
+a.skip:focus, 
+a.skip:hover {
+    left: 0; 
+    top: 0;
+    width: auto; 
+    height: auto; 
+    overflow: visible; 
+}
